@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { cart, cartTotal, cartCount } from '$lib/stores/cart';
+	import { base } from '$app/paths';
 
 	function removeItem(id: string) {
 		cart.removeItem(id);
@@ -28,11 +29,11 @@
 				<div class="cart-items">
 					{#each $cart as item (item.product.id)}
 						<article class="cart-item" aria-label="{item.product.title}">
-							<a href="/products/{item.product.id}" class="item-image">
+							<a href="{base}/products/{item.product.id}" class="item-image">
 								<img src={item.product.image} alt={item.product.title} />
 							</a>
 							<div class="item-details">
-								<a href="/products/{item.product.id}" class="item-title">{item.product.title}</a>
+								<a href="{base}/products/{item.product.id}" class="item-title">{item.product.title}</a>
 								<div class="item-meta">
 									<span class="seller">Sold by {item.product.seller}</span>
 									<span class="condition">{item.product.condition}</span>
@@ -86,7 +87,7 @@
 						</div>
 					</div>
 					<button class="checkout-btn">Proceed to Checkout</button>
-					<a href="/products" class="continue-shopping">Continue Shopping</a>
+					<a href="{base}/products" class="continue-shopping">Continue Shopping</a>
 				</aside>
 			</div>
 		{:else}
@@ -100,7 +101,7 @@
 				</div>
 				<h2>Your cart is empty</h2>
 				<p>Looks like you haven't added any items yet. Browse our marketplace to find adaptive products.</p>
-				<a href="/products" class="browse-btn">Browse Products</a>
+				<a href="{base}/products" class="browse-btn">Browse Products</a>
 			</div>
 		{/if}
 	</div>

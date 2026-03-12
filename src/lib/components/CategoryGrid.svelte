@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { categories } from '$lib/data/products';
+	import { base } from '$app/paths';
 </script>
 
 <section class="categories-section" aria-label="Product categories">
@@ -10,7 +11,7 @@
 		</div>
 		<div class="categories-grid">
 			{#each categories as category}
-				<a href="/products?category={category.id}" class="category-card" style="--accent: {category.color}">
+				<a href="{base}/products?category={category.id}" class="category-card" style="--accent: {category.color}">
 					<span class="category-icon" aria-hidden="true">{category.icon}</span>
 					<h3>{category.name}</h3>
 					<p>{category.description}</p>

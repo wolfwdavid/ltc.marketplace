@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { Product } from '$lib/data/products';
 	import { cart } from '$lib/stores/cart';
+	import { base } from '$app/paths';
 
 	interface Props {
 		product: Product;
@@ -21,7 +22,7 @@
 </script>
 
 <article class="product-card" aria-label="{product.title}">
-	<a href="/products/{product.id}" class="card-link">
+	<a href="{base}/products/{product.id}" class="card-link">
 		<div class="card-image">
 			<img src={product.image} alt={product.title} loading="lazy" />
 			{#if product.badge}

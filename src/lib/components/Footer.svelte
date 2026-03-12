@@ -1,9 +1,13 @@
+<script lang="ts">
+	import { base } from '$app/paths';
+</script>
+
 <footer class="footer" role="contentinfo">
 	<div class="footer-main">
 		<div class="container">
 			<div class="footer-grid">
 				<div class="footer-brand">
-					<a href="/" class="footer-logo" aria-label="LTC Market Place Home">
+					<a href="{base}/" class="footer-logo" aria-label="LTC Market Place Home">
 						<span class="logo-icon">LTC</span>
 						<span class="logo-text">Market Place</span>
 					</a>
@@ -16,30 +20,30 @@
 				<div class="footer-links">
 					<h3>Marketplace</h3>
 					<ul>
-						<li><a href="/products">Browse Products</a></li>
-						<li><a href="/categories">Categories</a></li>
-						<li><a href="/sell">Sell an Item</a></li>
-						<li><a href="/products?q=new">New Arrivals</a></li>
+						<li><a href="{base}/products">Browse Products</a></li>
+						<li><a href="{base}/categories">Categories</a></li>
+						<li><a href="{base}/sell">Sell an Item</a></li>
+						<li><a href="{base}/products?q=new">New Arrivals</a></li>
 					</ul>
 				</div>
 
 				<div class="footer-links">
 					<h3>About LTC</h3>
 					<ul>
-						<li><a href="/about">Our Mission</a></li>
-						<li><a href="/about">Our Story</a></li>
+						<li><a href="{base}/about">Our Mission</a></li>
+						<li><a href="{base}/about">Our Story</a></li>
 						<li><a href="https://www.levelthecurve.com/" target="_blank" rel="noopener noreferrer">Level The Curve</a></li>
-						<li><a href="/accessibility">Accessibility</a></li>
+						<li><a href="{base}/accessibility">Accessibility</a></li>
 					</ul>
 				</div>
 
 				<div class="footer-links">
 					<h3>Support</h3>
 					<ul>
-						<li><a href="/about">Contact Us</a></li>
-						<li><a href="/about">FAQs</a></li>
-						<li><a href="/about">Shipping Info</a></li>
-						<li><a href="/about">Returns Policy</a></li>
+						<li><a href="{base}/about">Contact Us</a></li>
+						<li><a href="{base}/about">FAQs</a></li>
+						<li><a href="{base}/about">Shipping Info</a></li>
+						<li><a href="{base}/about">Returns Policy</a></li>
 					</ul>
 				</div>
 			</div>

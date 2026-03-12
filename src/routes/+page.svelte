@@ -4,6 +4,7 @@
 	import ProductCard from '$lib/components/ProductCard.svelte';
 	import ImpactBanner from '$lib/components/ImpactBanner.svelte';
 	import { getFeaturedProducts } from '$lib/data/products';
+	import { base } from '$app/paths';
 
 	const featured = getFeaturedProducts();
 </script>
@@ -19,7 +20,7 @@
 	<div class="container">
 		<div class="section-header">
 			<h2>Featured Products</h2>
-			<a href="/products" class="view-all">View All Products</a>
+			<a href="{base}/products" class="view-all">View All Products</a>
 		</div>
 		<div class="product-grid">
 			{#each featured as product (product.id)}
@@ -56,7 +57,7 @@
 						<span>Support the community</span>
 					</div>
 				</div>
-				<a href="/sell" class="cta-btn">Start Selling Today</a>
+				<a href="{base}/sell" class="cta-btn">Start Selling Today</a>
 			</div>
 			<div class="cta-visual" aria-hidden="true">
 				<div class="cta-shape shape-1"></div>

@@ -3,6 +3,7 @@
 	import { getProductById, products } from '$lib/data/products';
 	import { cart } from '$lib/stores/cart';
 	import ProductCard from '$lib/components/ProductCard.svelte';
+	import { base } from '$app/paths';
 
 	let product = $derived(getProductById($page.params.id));
 	let quantity = $state(1);
@@ -37,9 +38,9 @@
 	<div class="container">
 		{#if product}
 			<nav class="breadcrumb" aria-label="Breadcrumb">
-				<a href="/">Home</a>
+				<a href="{base}/">Home</a>
 				<span aria-hidden="true">/</span>
-				<a href="/products">Products</a>
+				<a href="{base}/products">Products</a>
 				<span aria-hidden="true">/</span>
 				<span aria-current="page">{product.title}</span>
 			</nav>
@@ -178,7 +179,7 @@
 			<div class="not-found" role="alert">
 				<h1>Product Not Found</h1>
 				<p>Sorry, we couldn't find that product.</p>
-				<a href="/products" class="back-link">Back to Products</a>
+				<a href="{base}/products" class="back-link">Back to Products</a>
 			</div>
 		{/if}
 	</div>

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { categories, getProductsByCategory } from '$lib/data/products';
+	import { base } from '$app/paths';
 </script>
 
 <svelte:head>
@@ -18,7 +19,7 @@
 		<div class="categories-grid">
 			{#each categories as category}
 				{@const count = getProductsByCategory(category.id).length}
-				<a href="/products?category={category.id}" class="category-card" style="--accent: {category.color}">
+				<a href="{base}/products?category={category.id}" class="category-card" style="--accent: {category.color}">
 					<div class="card-header">
 						<span class="category-icon" aria-hidden="true">{category.icon}</span>
 						<span class="category-count">{count} product{count !== 1 ? 's' : ''}</span>

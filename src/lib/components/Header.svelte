@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { cartCount } from '$lib/stores/cart';
 	import { page } from '$app/stores';
+	import { base } from '$app/paths';
 
 	let mobileMenuOpen = $state(false);
 	let searchQuery = $state('');
@@ -8,7 +9,7 @@
 	function handleSearch(e: Event) {
 		e.preventDefault();
 		if (searchQuery.trim()) {
-			window.location.href = `/products?q=${encodeURIComponent(searchQuery.trim())}`;
+			window.location.href = `${base}/products?q=${encodeURIComponent(searchQuery.trim())}`;
 		}
 	}
 
@@ -17,11 +18,11 @@
 	}
 
 	const navLinks = [
-		{ href: '/', label: 'Home' },
-		{ href: '/products', label: 'Shop' },
-		{ href: '/categories', label: 'Categories' },
-		{ href: '/sell', label: 'Sell' },
-		{ href: '/about', label: 'About' }
+		{ href: `${base}/`, label: 'Home' },
+		{ href: `${base}/products`, label: 'Shop' },
+		{ href: `${base}/categories`, label: 'Categories' },
+		{ href: `${base}/sell`, label: 'Sell' },
+		{ href: `${base}/about`, label: 'About' }
 	];
 </script>
 
@@ -30,7 +31,7 @@
 		<div class="container">
 			<div class="header-top-content">
 				<span class="tagline">Access. Independence. Dignity.</span>
-				<a href="/accessibility" class="accessibility-link" aria-label="Accessibility settings">
+				<a href="{base}/accessibility" class="accessibility-link" aria-label="Accessibility settings">
 					<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
 						<circle cx="12" cy="4" r="2"/>
 						<path d="M12 8v4m0 4v4M8 12h8"/>
@@ -45,7 +46,7 @@
 	<div class="header-main">
 		<div class="container">
 			<div class="header-main-content">
-				<a href="/" class="logo" aria-label="LTC Market Place — Home">
+				<a href="{base}/" class="logo" aria-label="LTC Market Place — Home">
 					<span class="logo-icon">LTC</span>
 					<span class="logo-text">Market Place</span>
 				</a>
@@ -68,13 +69,13 @@
 				</form>
 
 				<nav class="header-actions" aria-label="User actions">
-					<a href="/sell" class="action-btn sell-btn" aria-label="Sell an item">
+					<a href="{base}/sell" class="action-btn sell-btn" aria-label="Sell an item">
 						<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
 							<path d="M12 5v14M5 12h14"/>
 						</svg>
 						<span>Sell</span>
 					</a>
-					<a href="/cart" class="action-btn cart-btn" aria-label="Shopping cart, {$cartCount} items">
+					<a href="{base}/cart" class="action-btn cart-btn" aria-label="Shopping cart, {$cartCount} items">
 						<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
 							<circle cx="9" cy="21" r="1"/>
 							<circle cx="20" cy="21" r="1"/>
@@ -131,7 +132,7 @@
 					</li>
 				{/each}
 				<li>
-					<a href="/accessibility" onclick={() => (mobileMenuOpen = false)}>
+					<a href="{base}/accessibility" onclick={() => (mobileMenuOpen = false)}>
 						Accessibility
 					</a>
 				</li>

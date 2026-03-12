@@ -1,3 +1,7 @@
+<script lang="ts">
+	import { base } from '$app/paths';
+</script>
+
 <section class="impact" aria-label="Our impact and mission">
 	<div class="container">
 		<div class="impact-grid">
@@ -27,7 +31,7 @@
 						<span>Fully accessible website meeting WCAG 2.1 AA standards</span>
 					</li>
 				</ul>
-				<a href="/about" class="learn-more">Learn More About Our Mission</a>
+				<a href="{base}/about" class="learn-more">Learn More About Our Mission</a>
 			</div>
 			<div class="impact-stats" aria-label="Key statistics about disability inequality">
 				<div class="stat-card" style="--color: #6B2FA0">

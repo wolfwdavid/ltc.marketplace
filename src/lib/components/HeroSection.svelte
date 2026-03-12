@@ -1,3 +1,7 @@
+<script lang="ts">
+	import { base } from '$app/paths';
+</script>
+
 <section class="hero" aria-label="Welcome to LTC Market Place">
 	<div class="hero-bg" aria-hidden="true">
 		<div class="hero-pattern"></div>
@@ -12,8 +16,8 @@
 					Built by the disability community, for everyone.
 				</p>
 				<div class="hero-actions">
-					<a href="/products" class="btn-primary">Shop Now</a>
-					<a href="/sell" class="btn-secondary">Start Selling</a>
+					<a href="{base}/products" class="btn-primary">Shop Now</a>
+					<a href="{base}/sell" class="btn-secondary">Start Selling</a>
 				</div>
 				<div class="hero-stats" aria-label="Marketplace statistics">
 					<div class="stat">
