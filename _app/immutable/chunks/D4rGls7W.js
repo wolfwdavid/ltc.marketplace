@@ -1,0 +1,1 @@
+import{j as y,k as o,H as u,E as _,h as t,C as p,o as i,p as l,q as d,v as g,w as v}from"./CR-QG4ni.js";function C(n,r){let s=null,E=t;var a;if(t){s=g;for(var e=v(document.head);e!==null&&(e.nodeType!==p||e.data!==n);)e=i(e);if(e===null)l(!1);else{var f=i(e);e.remove(),d(f)}}t||(a=document.head.appendChild(y()));try{o(()=>r(a),u|_)}finally{E&&(l(!0),d(s))}}export{C as h};
